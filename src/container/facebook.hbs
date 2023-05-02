@@ -1,0 +1,67 @@
+<div>
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+    <div>
+        <h3>Users</h3>
+        <ul>
+            {{#each users}}
+            <li>
+                {{> user}}
+                <div>
+                    <strong>Friends:</strong>
+                    <br>
+                    <br>
+                    <ul>
+                        {{#each friends}}
+                        <li>
+                            {{> user}}
+                            <div>
+                                <strong>Mutual friends:</strong>
+                                <br>
+                                <br>
+                                <ul>
+                                    {{#each mutual_friends}}
+                                    {{> user}}
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div>
+                    {{#if groups}}
+                    <strong>Groups</strong>
+                    <br>
+                    <br>
+                    <ul>
+                        {{#each groups}}
+                        <li>
+                            <div>Id: {{id}}</div>
+                            <br>
+                            <div>Name: <b>{{name}}</b></div>
+                            <br>
+                            <div>Description: <q>{{description}}</q></div>
+                            <br>
+                            <div>
+                                <strong>Members</strong>
+                                <br>
+                                <br>
+                                <ul>
+                                    {{#each members}}
+                                    {{> user}}
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                </div>
+            </li>
+
+            {{/each}}
+        </ul>
+    </div>
+</div>
