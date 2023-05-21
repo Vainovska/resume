@@ -1,0 +1,200 @@
+<div class="row g-3">
+    <table class="table col-12">
+        <tbody>
+            <tr class="col-12">
+                {{#with navigation}}
+                {{#each links}}
+                <td>
+                    <a href="{{href}}">{{text}}</a>
+                </td>
+                {{/each}}
+                <td>
+                    <button class="btn btn-primary" href="{{button.href}}">
+                        {{button.text}}
+                    </button>
+                </td>
+                {{/with}}
+            </tr>
+            <tr class="col-12">
+                <td colspan="4">
+                    {{#with header}}
+                    <h1>{{title}}</h1>
+                    <p>{{description}}</p>
+                    <button class="btn btn-primary" href="{{button.link}}">{{button.text}}</button>
+                    {{/with}}
+                </td>
+            </tr>
+            <tr class="col-12">
+                {{#with city}}
+                <h2>{{title}}</h2>
+                <table class="table">
+                    <tbody class="row">
+
+
+                        {{#each cards}}
+                        <tr class="col-6">
+                            <td>
+                                <div class="card">
+                                    <img class="card-img-top" src="{{picture.src}}" alt="{{picture.alt}}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{title}}</h5>
+                                        <p>{{description}}</p>
+                                        <button class="btn btn-primary" href="{{button.href}}">{{button.text}}</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
+
+
+                    </tbody>
+                </table>
+                {{/with}}
+            </tr>
+            <tr class="col-12">
+                {{#with winner}}
+                <h2>{{title}}</h2>
+                <section>
+                    <table class="table table-striped">
+                        <thead>
+                            {{#each table.head}}
+                            <th>{{this}}</th>
+                            {{/each}}
+                        </thead>
+                        <tbody>
+                            {{#each table.user}}
+                            <tr>
+                                <th>{{place}}</th>
+                                <td>{{name}}</td>
+                                <td>{{surname}}</td>
+                                <td>{{nickname}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </section>
+                {{/with}}
+            </tr>
+            <tr class="col-12">
+                {{#with gallery}}
+                <h2>{{title}}</h2>
+                <table class="table">
+                    <tbody class="col-12">
+                        <tr>
+                            {{#each cards}}
+                            <td class="col-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6>{{name}}</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        {{#each items}}
+                                        <div>{{this}}</div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </td>
+                            {{/each}}
+                        </tr>
+                    </tbody>
+
+                </table>
+                {{/with}}
+            </tr>
+            <tr class="col-12">
+                {{#with relaxion}}
+                <div class="display-3">{{title}}</div>
+                <table class="table">
+                    <tbody class="row">
+                        {{#each cards}}
+                        <tr class="col-6">
+                            <td class="col=6">
+                                <div class="card text-bg-dark">
+                                    <div class="card-header">{{header}}</div>
+                                    <div class="card-body">
+                                        <h6>{{title}}</h6>
+                                        <p>{{description}}</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                {{/with}}
+            </tr>
+            <tr class="col-12">
+                {{#with rest}}
+                <table class="table col-6">
+                    <tbody class="row">
+                        <tr>
+                            {{#each cards}}
+                            <td class="col-6">
+                                <div class="card">
+                                    <div class="card-header text-center">{{header}}</div>
+                                    <div class="card-body text-center">
+                                        <h6>{{title}}</h6>
+                                        <p>{{description}}</p>
+                                        <button class="btn btn-primary">{{button}}</button>
+                                    </div>
+                                    <div class="card-footer text-center">{{footer}}</div>
+                                </div>
+                            </td>
+                            {{/each}}
+                        </tr>
+                    </tbody>
+                </table>
+                {{/with}}
+            </tr>
+            <tr class="col-12">
+                {{#with proposition}}
+                <h2 class="display-2">{{title}}</h2>
+                <table class="table">
+                    <tbody class="col-5 ">
+                        <tr>
+                            {{#each card}}
+                            <td class="gx-5">
+                                <div class="card text-bg-warning">
+                                    <div class="card-header">{{header}}</div>
+                                    <div class="card-body">
+                                        <h6>{{title}}</h6>
+                                        <p>{{description}}</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            {{/each}}
+                        </tr>
+                    </tbody>
+                </table>
+                {{/with}}
+            </tr>
+            <tr class="col-12">
+                {{#with footer}}
+                <h5>{{title}}</h5>
+                <table class="table">
+                    <tbody class="row q-6">
+                        <tr class="col-6 qy-6">
+                            <td class="col-1">
+                                {{#each navigation}}
+                                <button class="btn btn-link" href="{{href}}">{{text}}</button>
+                                {{/each}}
+                            </td>
+                            <td class="col-1">
+                                {{#each socialMedia}}
+                                <button class="btn btn-dark" href="{{link}}">{{name}}</button>
+                                {{/each}}
+                            </td>
+                            <td class="col-1">
+                                {{#each partners}}
+                                <button class="btn btn-outline-primary" href="{{link}}">{{name}}</button>
+                                {{/each}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {{/with}}
+            </tr>
+        </tbody>
+    </table>
+</div>
