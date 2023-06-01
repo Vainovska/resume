@@ -13,32 +13,30 @@
         </div>
         <div class="col-12 card">
             {{#with newsBlock}}
-            <h2 class="text-center">{{title}}</h2>
+            <h2 class="text-center py-2">{{title}}</h2>
             <div class="row">
-                <ol>
-                    {{#each cards}}
-                    <li class="col-3">
-                        <div class="card text-bg-dark pe-2 mb-2">
-                            <div class="card-item">
-                                <div class="card-header">
-                                    {{title}}
-                                    <div>
-                                        {{#if isTop}}
-                                        <span class="badge text-bg-danger rounded-pill">Top</span>
-                                        {{/if}}
-                                        {{#if isNew}}
-                                        <span class="badge text-bg-success rounded-pill">New</span>
-                                        {{/if}}
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p>{{description}}</p>
+                {{#each cards}}
+                <div class="col-3">
+                    <div class="card text-bg-dark pe-2 mb-2">
+                        <div class="card-item">
+                            <div class="card-header">
+                                {{title}}
+                                <div>
+                                    {{#if isTop}}
+                                    <span class="badge text-bg-danger rounded-pill">Top</span>
+                                    {{/if}}
+                                    {{#if isNew}}
+                                    <span class="badge text-bg-success rounded-pill">New</span>
+                                    {{/if}}
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <p>{{description}}</p>
+                            </div>
                         </div>
-                    </li>
-                    {{/each}}
-                </ol>
+                    </div>
+                </div>
+                {{/each}}
             </div>
             {{/with}}
         </div>
@@ -58,10 +56,10 @@
                 </div>
                 {{/each}}
             </div>
-            <div class="row">
-                <ul class="col-12 card">
+            <div class="card">
+                <div class="row">
                     {{#each cards}}
-                    <li class="col-3">
+                    <div class="col-4">
                         <div class="card-item">
                             <img class="card-img-top" src="{{image}}">
                             <div class="card-body">
@@ -79,10 +77,9 @@
                                 <p>{{description}}</p>
                             </div>
                         </div>
-                    </li>
+                    </div>
                     {{/each}}
-                </ul>
-
+                </div>
             </div>
             {{/with}}
         </div>
