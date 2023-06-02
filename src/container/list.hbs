@@ -1,0 +1,17 @@
+<div>
+    <ul>
+        {{#each list}}
+        <li>
+            {{#if @first}} First {{/if}}
+            <span>{{name}}</span>
+        </li>
+        {{/each}}
+        <br>
+        <br>
+        {{#each user}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

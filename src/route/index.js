@@ -1763,7 +1763,27 @@ router.get('/shophome', function (req, res) {
 })
 
 // ================================================================
+// ================================================================
+router.get('/list', function (req, res) {
+  // res.render генерує нам HTML сторінку
 
+  //            ↙ cюди вводимо назву файлу з сontainer
+
+  res.render('list', {
+    list: [
+      { name: 'First Button' },
+      { name: 'Second Button' },
+      { name: 'Error Button' },
+      { name: 'ubmit Button' },
+    ],
+    user: {
+      name: 'Ivan',
+      role: 'Admin',
+      isConfirm: true,
+      age: 32,
+    },
+  })
+})
 // ================================================================
 
 // Підключаємо роутер до бек-енду
