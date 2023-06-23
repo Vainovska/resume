@@ -2,8 +2,8 @@
     <ul>
         {{#each list}}
         <li>
-            {{#if @first}} First {{/if}}
-            <span>{{name}}</span>
+
+            <button {{#if @first}} disabled {{/if}}>{{name}}</button>
         </li>
         {{/each}}
         <br>
