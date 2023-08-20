@@ -1,6 +1,14 @@
-<nav>
-    {{> link text='Skills' href="/skills" line=true }}
-    {{> link text='Sammary' href="/summary" line=true }}
-    {{> link text='Education' href="/education" line=true }}
-    {{> link text='Work' href="/work" line=true noLine=true }}
+<nav class="nav ps-5 mb-5">
+    <div class="nav-item">
+        {{> link text='Skills' href="/skills" }}
+    </div>
+    <div class="nav-item">
+        {{> link text='Sammary' href="/summary" }}
+    </div>
+    <div class="nav-item">
+        {{> link text='Education' href="/education" }}
+    </div>
+    <div class="nav-item">
+        {{> link text='Work' href="/work" noLine=true}}
+    </div>
 </nav>
