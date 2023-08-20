@@ -3,38 +3,46 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="ms-5">
 
     {{#with main}}
-    <main>
-        <section>
-            {{> title data="All skills" big=true}}
-            <ul>
-                {{#each skills}}
-                <li class="ms-5 mb-2">
-                    {{name}}
-                    {{#if point includeZero=true}} ({{point}}) {{/if}}
-                    {{#if isTop}} (top) {{/if}}
-                    {{#unless point includeZero=true}} do not study {{/unless}}
-                    {{#unless point}}
-                    {{#if point includeZero=true}}
-                    (now study)
-                    {{/if}}
-                    {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
+    <main class="mb-5">
+        <section class="card mb-3">
+            <div class="card-body">
+                <div class="card-title">
+                    {{> title data="All skills" big=true}}
+                </div>
+                <ul>
+                    {{#each skills}}
+                    <li class="ms-5 mb-2">
+                        {{name}}
+                        {{#if point includeZero=true}} ({{point}}) {{/if}}
+                        {{#if isTop}} (top) {{/if}}
+                        {{#unless point includeZero=true}} do not study {{/unless}}
+                        {{#unless point}}
+                        {{#if point includeZero=true}}
+                        (now study)
+                        {{/if}}
+                        {{/unless}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
         </section>
-        <section>
-            {{> title data="My hobbies" big=false}}
-            <ol>
-                {{#each hobbies}}
-                <li class="ms-5">
-                    {{name}}
-                    {{#if isMain}} (favourite) {{/if}}
-                </li>
-                {{/each}}
-            </ol>
+        <section class="card mt-3">
+            <div class="card-body">
+                <div class="card-title">
+                    {{> title data="My hobbies" big=false}}
+                </div>
+                <ol>
+                    {{#each hobbies}}
+                    <li class="ms-5">
+                        {{name}}
+                        {{#if isMain}} (favourite) {{/if}}
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
         </section>
     </main>
     {{/with}}
