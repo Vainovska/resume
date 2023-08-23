@@ -1,25 +1,25 @@
-<div>
-    <div>
-        <h1>{{name}}</h1>
+<div class=" ms-5">
+    <div class="card p-3">
+        <div>
+            <h1>{{name}}</h1>
+        </div>
+        <br>
+        <br>
+        <div>Birthdate: {{birthdate}}</div>
+        <br>
+        <div>Birthplace: <address>{{birthplace}}</address>
+        </div>
+        <br>
+        <div>Deathdate: {{deathdate}}</div>
+        <br>
+        <div>Deathplace: <address>{{deathplace}}</address>
+        </div>
+        <br>
+        <div>Nationality: {{nationality}}</div>
+        <br>
+        <div>Occupation: <strong>{{occupation}}</strong></div>
     </div>
-    <br>
-    <br>
-    <div>Birthdate: {{birthdate}}</div>
-    <br>
-    <div>Birthplace: <address>{{birthplace}}</address>
-    </div>
-    <br>
-    <div>Deathdate: {{deathdate}}</div>
-    <br>
-    <div>Deathplace: <address>{{deathplace}}</address>
-    </div>
-    <br>
-    <div>Nationality: {{nationality}}</div>
-    <br>
-    <div>Occupation: <strong>{{occupation}}</strong></div>
-    <br>
-    <hr>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Known for:</h3>
         <ul>
             {{#each known_for}}
@@ -28,9 +28,7 @@
             {{/each}}
         </ul>
     </div>
-    <br>
-    <hr>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Education:</h3>
         {{#each education}}
         <div>Degree: <b>{{degree}}</b></div>
@@ -40,9 +38,7 @@
         <div>Institution: <strong>{{institution}}</strong> ({{year}})</div>
         {{/each}}
     </div>
-    <br>
-    <hr>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Notable publications:</h3>
         <ul>
             {{#each notable_publications}}
@@ -57,8 +53,7 @@
             {{/each}}
         </ul>
     </div>
-    <hr>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Partner:</h3>
         <ul>
             {{#each partners}}
@@ -73,8 +68,7 @@
             {{/each}}
         </ul>
     </div>
-    <hr>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Awards:</h3>
         {{#each awards}}
         <div>Title: <strong>{{title}}</strong></div>
@@ -85,8 +79,7 @@
         <br>
         {{/each}}
     </div>
-    <br>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Influences:</h3>
         <ul>
             {{#each influences}}
@@ -95,7 +88,7 @@
             {{/each}}
         </ul>
     </div>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Influenced:</h3>
         <ul>
             {{#each influenced}}
@@ -104,7 +97,7 @@
             {{/each}}
         </ul>
     </div>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Quotes:</h3>
         <ul>
             {{#each quotes}}
@@ -113,7 +106,7 @@
             {{/each}}
         </ul>
     </div>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Major discoveries:</h3>
         {{#each major_discoveries}}
         <div>Title: <b>{{title}}</b></div>
@@ -123,7 +116,7 @@
         <div>Description: <em>"{{description}}"</em></div>
         {{/each}}
     </div>
-    <div>
+    <div class="card my-3 p-3">
         <h3>Contributions:</h3>
         {{#with contributions}}
         <div>Title: <b>{{title}}</b></div>
