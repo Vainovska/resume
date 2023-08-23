@@ -1,153 +1,171 @@
-<div>
-    <div>
-        <h1>{{name}}</h1>
-    </div>
-    <div>
-        <strong>{{description}}</strong>
-    </div>
-    <br>
-    <div>Price: <mark>{{price}}</mark></div>
-    <br>
-    <div>Category: <b>{{category}}</b></div>
-    <hr>
-    <br>
-    <div>
-        {{#with features}}
-        <div>
-            {{#with processor}}
-            <h3>Processor</h3>
-            <div>Brand: {{brand}}</div>
+<div class="card ms-5 p-5">
+    <div class="card-body">
+        <div class="card-title">
+            <div>
+                <h1>{{name}}</h1>
+            </div>
+            <div>
+                <strong>{{description}}</strong>
+            </div>
             <br>
-            <div>Model: {{model}}</div>
+            <div>Price: <mark>{{price}}</mark></div>
             <br>
-            <div>Speed: {{speed}}</div>
-            <br>
-            <div>Cores: {{cores}}</div>
-            <br>
-            <div>Cache: {{cache}}</div>
-            <br>
-            {{/with}}
-            <hr>
-        </div>
-        <div>
-            {{#with memory}}
-            <h3>Memory</h3>
-            <div>Type: {{type}}</div>
-            <br>
-            <div>Size: {{size}}</div>
-            <br>
-            <div>Speed: {{speed}}</div>
-            <br>
-            {{/with}}
-            <hr>
-        </div>
-        <div>
-            {{#with storage}}
-            <h3>Storage</h3>
-            <div>Type: {{type}}</div>
-            <br>
-            <div>Size: {{size}}</div>
-            <br>
-            {{/with}}
-            <hr>
-        </div>
-        <div>
-            {{#with display}}
-            <h3>Display</h3>
-            <div>Size: {{size}}</div>
-            <br>
-            <div>Resolution: {{resolution}}</div>
-            <br>
-            <div>Color spase: {{color_spase}}</div>
-            <br>
-            <div>Brightness: {{brightness}}</div>
-            <br>
-            <div>Refresh rate: {{refresh_rate}}</div>
-            <br>
-            {{/with}}
-            <hr>
-        </div>
-        <div>
-            {{#with graphics}}
-            <h3>Graphics</h3>
-            <div>Brand: {{brand}}</div>
-            <br>
-            <div>Model: {{model}}</div>
-            <br>
-            <div>Memory: {{memory}}</div>
-            <br>
-            {{/with}}
-            <hr>
-        </div>
-        <div>
-            <ul>
-                {{#each ports}}
-                <li>Type: {{type}}</li>
-                <br>
-                <li>Count: {{count}}</li>
-                <br>
-                </li>
-                {{#if features}}
-                <li>Features:
-                    <ul>
-
-                        {{#each features}}
-
-                        <li>{{this}}</li>
-                        <br>
-                        {{/each}}
-                    </ul>
-                </li>
-                {{/if}}
-
-                {{/each}}
-            </ul>
+            <div>Category: <b>{{category}}</b></div>
         </div>
         <hr>
+        <br>
         <div>
-            {{#with battery}}
-            <h3>Battery</h3>
-            <div>Type: {{type}}</div>
-            <br>
-            <div>Capacity: {{capacity}}</div>
-            <br>
-            <div>Life: {{life}}</div>
-            <br>
-            {{/with}}
-        </div>
-        <br>
-        <div><strong>Weight:</strong> {{weight}}</div>
-        <br>
-
-        <div>
-            {{#with dimensions}}
-            <h3>Dimensions</h3>
-            <div>Height: {{height}}</div>
-            <br>
-            <div>Width: {{width}}</div>
-            <br>
-            <div>Depth: {{depth}}</div>
-            <br>
-            {{/with}}
-            <hr>
-        </div>
-        <br>
-
-        <div><strong>Operating system:</strong> {{operating_system}}</div>
-        <br>
-
-        <div>
-            <ul>
-                {{#each accessories}}
-                <li>
-                    <div>Name: {{name}}</div>
+            {{#with features}}
+            <div>
+                {{#with processor}}
+                <h3 class="my-2">Processor</h3>
+                <div class="ms-2">
+                    <div>Brand: {{brand}}</div>
                     <br>
-                    <div>Price: {{price}}</div>
-                </li>
-                <br>
-                {{/each}}
-            </ul>
+                    <div>Model: {{model}}</div>
+                    <br>
+                    <div>Speed: {{speed}}</div>
+                    <br>
+                    <div>Cores: {{cores}}</div>
+                    <br>
+                    <div>Cache: {{cache}}</div>
+                    <br>
+                </div>
+                {{/with}}
+                <hr>
+            </div>
+            <div>
+                {{#with memory}}
+                <h3 class="my-3">Memory</h3>
+                <div class="ms-2">
+                    <div>Type: {{type}}</div>
+                    <br>
+                    <div>Size: {{size}}</div>
+                    <br>
+                    <div>Speed: {{speed}}</div>
+                    <br>
+                </div>
+                {{/with}}
+                <hr>
+            </div>
+            <div>
+                {{#with storage}}
+                <h3 class="my-3">Storage</h3>
+                <div class="ms-2">
+                    <div>Type: {{type}}</div>
+                    <br>
+                    <div>Size: {{size}}</div>
+                    <br>
+                </div>
+                {{/with}}
+                <hr>
+            </div>
+            <div>
+                {{#with display}}
+                <h3 class="my-3">Display</h3>
+                <div class="ms-2">
+                    <div>Size: {{size}}</div>
+                    <br>
+                    <div>Resolution: {{resolution}}</div>
+                    <br>
+                    <div>Color spase: {{color_spase}}</div>
+                    <br>
+                    <div>Brightness: {{brightness}}</div>
+                    <br>
+                    <div>Refresh rate: {{refresh_rate}}</div>
+                    <br>
+                </div>
+                {{/with}}
+                <hr>
+            </div>
+            <div>
+                {{#with graphics}}
+                <h3 class="my=3">Graphics</h3>
+                <div class="ms-2">
+                    <div>Brand: {{brand}}</div>
+                    <br>
+                    <div>Model: {{model}}</div>
+                    <br>
+                    <div>Memory: {{memory}}</div>
+                    <br>
+                </div>
+                {{/with}}
+                <hr>
+            </div>
+            <div>
+                <ul>
+                    {{#each ports}}
+                    <li>Type: {{type}}</li>
+                    <br>
+                    <li>Count: {{count}}</li>
+                    <br>
+                    </li>
+                    {{#if features}}
+                    <li>Features:
+                        <ul>
+
+                            {{#each features}}
+
+                            <li>{{this}}</li>
+                            <br>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/if}}
+
+                    {{/each}}
+                </ul>
+            </div>
+            <hr>
+            <div>
+                {{#with battery}}
+                <h3 class="my-3">Battery</h3>
+                <div class="ms-2">
+                    <div>Type: {{type}}</div>
+                    <br>
+                    <div>Capacity: {{capacity}}</div>
+                    <br>
+                    <div>Life: {{life}}</div>
+                    <br>
+                </div>
+                {{/with}}
+            </div>
+            <br>
+            <div><strong>Weight:</strong> {{weight}}</div>
+            <br>
+
+            <div>
+                {{#with dimensions}}
+                <h3 class="my-3">Dimensions</h3>
+                <div class="ms-2">
+                    <div>Height: {{height}}</div>
+                    <br>
+                    <div>Width: {{width}}</div>
+                    <br>
+                    <div>Depth: {{depth}}</div>
+                    <br>
+                </div>
+                {{/with}}
+                <hr>
+            </div>
+            <br>
+
+            <div><strong>Operating system:</strong> {{operating_system}}</div>
+            <br>
+
+            <div>
+                <ul>
+                    {{#each accessories}}
+                    <li>
+                        <div>Name: {{name}}</div>
+                        <br>
+                        <div>Price: {{price}}</div>
+                    </li>
+                    <br>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/with}}
         </div>
-        {{/with}}
     </div>
 </div>

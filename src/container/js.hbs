@@ -1,111 +1,113 @@
-<div>
-    <div>
+<div class="ms-5">
+    <div class="mb-3">
         <h1>{{name}}</h1>
     </div>
-    <br>
-    <br>
-    <br>
-    <div>{{description}}</div>
-    <br>
-    <br>
-    <div>
-        <h3>History:</h3>
-        <br>
-        <div>Year: <b>{{history.year}}</b></div>
-        <br>
-        <div>Founder: <b>{{history.founder}}</b></div>
-        <br>
-    </div>
-    <div>
-        <h3>Types:</h3>
-        <ul>
-            {{#each types}}
-            <li>{{this}}</li>
+    <div class="card p-3">
+        <div class="card-body">
+            <div>{{description}}</div>
             <br>
-            {{/each}}
-        </ul>
-    </div>
-    <div>
-        <h3>Syntax:</h3>
-    </div>
-    <div>
+            <br>
+            <div class="my-3">
+                <h3>History:</h3>
+                <br>
+                <div>Year: <b>{{history.year}}</b></div>
+                <br>
+                <div>Founder: <b>{{history.founder}}</b></div>
+                <br>
+            </div>
+            <div class="my-3">
+                <h3>Types:</h3>
+                <ul>
+                    {{#each types}}
+                    <li>{{this}}</li>
+                    <br>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <h3>Syntax:</h3>
+            </div>
+            <div>
 
-        {{#with syntax}}
-        <div>
-            <h5>Variables:</h5>
-            <ul>
-                {{#each variables}}
-                <li>{{this}}</li>
-                <br>
-                {{/each}}
-            </ul>
-        </div>
+                {{#with syntax}}
+                <div class="my-3">
+                    <h5>Variables:</h5>
+                    <ul>
+                        {{#each variables}}
+                        <li>{{this}}</li>
+                        <br>
+                        {{/each}}
+                    </ul>
+                </div>
 
-        <div>
-            <h5>Functions:</h5>
-            <ul>
-                {{#each functions}}
+                <div class="my-3">
+                    <h5>Functions:</h5>
+                    <ul>
+                        {{#each functions}}
+                        <li>{{this}}</li>
+                        <br>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="my-3">
+                    <h5>Conditionals:</h5>
+                    <ul>
+                        {{#each conditionals}}
+                        <li>{{this}}</li>
+                        <br>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="my-3">
+                    <h5>Loops:</h5>
+                    <ul>
+                        {{#each loops}}
+                        <li>{{this}}</li>
+                        <br>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="my-3">
+                    <h5>Classes:</h5>
+                    <ul>
+                        {{#each classes}}
+                        <li>{{this}}</li>
+                        <br>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/with}}
+            </div>
+            <div class="my-3">
+                <h3>Libraries:</h3>
+                {{#each libraries}}
                 <li>{{this}}</li>
                 <br>
                 {{/each}}
-            </ul>
-        </div>
-        <div>
-            <h5>Conditionals:</h5>
-            <ul>
-                {{#each conditionals}}
+                </ul>
+            </div>
+            <div class="my-3">
+                <h3>Tools:</h3>
+                {{#each tools}}
                 <li>{{this}}</li>
                 <br>
                 {{/each}}
-            </ul>
+                </ul>
+            </div>
+            <hr>
+            <div class="mt-3">
+                <h3>Community:</h3>
+                <ul>
+                    {{#each community}}
+                    <li>
+                        <div>Name: <b>{{name}}</b></div>
+                        <br>
+                        <div>Type: <b>{{type}}</b></div>
+                        <br>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
-        <div>
-            <h5>Loops:</h5>
-            <ul>
-                {{#each loops}}
-                <li>{{this}}</li>
-                <br>
-                {{/each}}
-            </ul>
-        </div>
-        <div>
-            <h5>Classes:</h5>
-            <ul>
-                {{#each classes}}
-                <li>{{this}}</li>
-                <br>
-                {{/each}}
-            </ul>
-        </div>
-        {{/with}}
-    </div>
-    <div>
-        <h3>Libraries:</h3>
-        {{#each libraries}}
-        <li>{{this}}</li>
-        <br>
-        {{/each}}
-        </ul>
-    </div>
-    <div>
-        <h3>Tools:</h3>
-        {{#each tools}}
-        <li>{{this}}</li>
-        <br>
-        {{/each}}
-        </ul>
-    </div>
-    <div>
-        <h3>Community:</h3>
-        <ul>
-            {{#each community}}
-            <li>
-                <div>Name: <b>{{name}}</b></div>
-                <br>
-                <div>Type: <b>{{type}}</b></div>
-                <br>
-            </li>
-            {{/each}}
-        </ul>
     </div>
 </div>

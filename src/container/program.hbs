@@ -1,17 +1,18 @@
-<div>
+<div class="card ms-5">
     {{#with program.excursion}}
-    <div>
-        <h1>{{name}}</h1>
-    </div>
-    <br>
-    <div>
-        <h2>{{location.city}}, {{location.country}}</h2>
-    </div>
-    <div>Date: <b>{{date}}</b></div>
-    <hr>
-    <div>
+    <div class="card-header p-2">
         <div>
-            <h3>Program:</h3>
+            <h1>{{name}}</h1>
+        </div>
+        <br>
+        <div>
+            <h2>{{location.city}}, {{location.country}}</h2>
+        </div>
+        <div>Date: <b>{{date}}</b></div>
+    </div>
+    <div class="card-body">
+        <div>
+            <h3 class="text-center p-2">Program:</h3>
         </div>
         <ol>
             {{#each program}}
@@ -88,6 +89,7 @@
                 <div>
                     {{#with details}}
                     <ul>
+                        {{#if performers}}
                         <div>
                             <h3>Performers:</h3>
                         </div>
@@ -99,11 +101,12 @@
                             <br>
                         </li>
                         {{/each}}
+                        {{/if}}
                     </ul>
                     {{/with}}
                 </div>
                 <div>
-                    <h3>Guide:</h3>
+                    <h3 class="m-2">Guide:</h3>
                     <div>
                         {{#with details.guide}}
                         <div>Name: {{name}}</div>
@@ -116,7 +119,6 @@
                     </div>
                 </div>
             </li>
-            <hr>
             {{/each}}
         </ol>
     </div>
